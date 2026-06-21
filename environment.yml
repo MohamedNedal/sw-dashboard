@@ -1,0 +1,17 @@
+name: swdash
+# Conda environment for the Space Weather Dashboard with full HUXt support.
+# HUXt requires Python >= 3.12 (via sunpy >= 7.1), so we pin 3.12 here.
+#
+#   conda env create -f environment.yml
+#   conda activate swdash
+#   ./run.sh
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -r requirements.txt
+      # Real HUXt CME model (optional but enabled in this env). Remove this
+      # line if the git install fails and run the dashboard without it.
+      - git+https://github.com/University-of-Reading-Space-Science/HUXt.git

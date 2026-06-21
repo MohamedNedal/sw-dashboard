@@ -1,0 +1,21 @@
+# Core dashboard (required) -------------------------------------------------
+streamlit>=1.33
+plotly>=5.20
+pandas>=2.0
+numpy>=1.24
+requests>=2.31
+matplotlib>=3.7
+streamlit-autorefresh>=1.0   # enables live auto-refresh
+
+# Solar physics / ephemerides (required for the Spacecraft panel) -----------
+sunpy>=5.1
+astropy>=6.0
+astroquery>=0.4.7            # JPL Horizons access used by sunpy
+
+# Optional science extras (uncomment / install as needed) -------------------
+# aiapy>=0.7                 # SDO/AIA calibration & deeper imagery work
+# pyspedas>=1.5             # heliophysics mission data (THEMIS, MMS, ...)
+# sunkit-image>=0.5         # extra solar image processing
+
+# Optional CME model — install separately, see README:
+#   pip install "git+https://github.com/University-of-Reading-Space-Science/HUXt.git"
